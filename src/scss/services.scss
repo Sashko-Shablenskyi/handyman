@@ -1,0 +1,21 @@
+.services {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include adaptiveValue('column-gap', 68, 25);
+    @include adaptiveValue('row-gap', 50, 30);
+    margin-top: rem(64);
+
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

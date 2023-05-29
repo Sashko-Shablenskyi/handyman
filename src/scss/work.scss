@@ -1,0 +1,90 @@
+.work {
+  box-shadow: 0px 0px 40px -6px rgba(29, 117, 101, 0.2);
+  &__wrapper {
+    margin-top: rem(64);
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0;
+    }
+  }
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(8);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: rem(25);
+    }
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__img {
+    border-radius: rem(30);
+    overflow: hidden;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    margin-top: rem(20);
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      margin-top: rem(40);
+    }
+  }
+
+  &__subtitle {
+    font-weight: 900;
+    font-size: rem(36);
+    line-height: 138%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--bg-secondary);
+    white-space: nowrap;
+  }
+
+  &__descr {
+    position: relative;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 138.5%;
+    color: var(--text-secondary);
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(-14);
+      height: 100%;
+      width: rem(4);
+      background-color: var(--accent);
+      border-radius: rem(10);
+
+      @media (max-width: $mobile) {
+        height: rem(4);
+        width: 25%;
+        left: 0;
+        bottom: rem(-18);
+      }
+    }
+  }
+
+  &__btn {
+    align-self: center;
+  }
+}

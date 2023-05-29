@@ -1,0 +1,54 @@
+.intro {
+  position: relative;
+  background: url(../img//intro//intro_bg.png) top right/contain no-repeat;
+  padding-top: rem(74);
+  min-height: rem(900);
+  @include adaptiveValue('min-height', 900, 700);
+
+  @media (max-width: $mobile) {
+    background-size: cover;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    padding-top: rem(20);
+    @media (max-width: $mobile) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    &::after {
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  &__person {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    img {
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+  }
+}
