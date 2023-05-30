@@ -1,0 +1,29 @@
+.testimonials {
+  background: url(../img/testimonials/testimonials_bg.png) bottom right/40%
+    no-repeat;
+
+  @media (max-width: $mobile) {
+    background-size: cover;
+  }
+  &__wrapper {
+    display: flex;
+    @include adaptiveValue('margin-top', 86, 50);
+    gap: rem(20);
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__box {
+    max-width: calc(100% / 3);
+
+    @media (max-width: $mobile) {
+      max-width: calc(100% / 2 - rem(20));
+    }
+
+    @media (max-width: $mobileSmall) {
+      max-width: 100%;
+    }
+  }
+}

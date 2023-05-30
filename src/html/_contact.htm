@@ -1,0 +1,74 @@
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__wrapper">
+      <div class="contact__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5431873.430734137!2d31.1788196!3d48.3358857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d1d9c154700e8f%3A0x1068488f64010!2z0KPQutGA0LDRl9C90LA!5e0!3m2!1suk!2sua!4v1685453573741!5m2!1suk!2sua"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="contact__right">
+        <div class="title contact__title">Contact <span>us</span></div>
+
+        <div class="contact__box">
+          <form class="form" action="files/sendmail/sendmail.php" method="POST">
+            <input
+              type="text"
+              name="form[user_name]"
+              placeholder="What your name?"
+              class="form__input"
+            />
+            <input
+              type="text"
+              name="form[email]"
+              data-error="Error"
+              placeholder="E-mail*"
+              class="form__input"
+            />
+            <input
+              type="phone"
+              name="form[phone]"
+              data-error="Error"
+              placeholder="Number phone*"
+              class="form__input"
+            />
+            <textarea
+              name="form[email]"
+              placeholder="Message"
+              class="form__input"
+            ></textarea>
+            <div class="form__footer">
+              <button type="submit" class="form__btn btn btn--small"
+                >Submit</button
+              >
+              <span class="form__success"
+                >Thank you for contacting us! You will get an Answer soon</span
+              >
+            </div>
+          </form>
+
+          <address>
+            <a
+              class="_icon-email"
+              href="mailto:sashkoace@gmail.com"
+              target="_blank"
+              >sashkoace@gmail.com</a
+            >
+            <a class="_icon-phone" href="tel:+380683551885" target="_blank"
+              >+38(068) 355 188 5</a
+            >
+            <a
+              class="_icon-location"
+              href="https://www.google.com/maps/place/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@48.335886,31.17882,5z/data=!4m6!3m5!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799!16zL20vMDd0MjE?hl=uk&entry=ttu"
+              target="_blank"
+              >Ukraine</a
+            >
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
